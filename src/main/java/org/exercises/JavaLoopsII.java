@@ -4,7 +4,6 @@ import java.io.*;
 import java.util.*;
 
 public class JavaLoopsII {
-
     public String[] main(String[] args) {
         int q = Integer.parseInt(args[0]);
 
