@@ -1,34 +1,55 @@
 package org.exercises;
 
-import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
-public class JavaLoopsII {
+public class JavaDatatypes {
 
     public String[] main(String[] args) {
         int q = Integer.parseInt(args[0]);
 
-        String[] queries = new String[q];
+        List<String> output = new ArrayList<String>();
         int argsIndex = 1;
         for (int i = 0; i < q; i++) {
-            String[] queryArgs = args[argsIndex].split(" ");
-            int a = Integer.parseInt(queryArgs[0]);
-            int b = Integer.parseInt(queryArgs[1]);
-            int n = Integer.parseInt(queryArgs[2]);
+            String n = args[argsIndex];
 
-            StringBuilder query = new StringBuilder();
+            List<String> fittedTypes = new ArrayList<String>();
 
-            int sum = a;
-            for (int j = 0; j < n; j++) {
-                double calc = Math.pow(2, j) * b;
-                sum += (int) calc;
-                query.append(" ").append(sum);
+            try {
+                Byte.parseByte(n);
+                fittedTypes.add("* byte");
+            } catch (Exception ignored) {
             }
 
-            queries[i] = query.toString().trim();
+            try {
+                Short.parseShort(n);
+                fittedTypes.add("* short");
+            } catch (Exception ignored) {
+            }
+
+            try {
+                Integer.parseInt(n);
+                fittedTypes.add("* int");
+            } catch (Exception ignored) {
+            }
+
+            try {
+                Long.parseLong(n);
+                fittedTypes.add("* long");
+            } catch (Exception ignored) {
+            }
+
+            if (!fittedTypes.isEmpty()) {
+                output.add(n + " can be fitted in:");
+                output.addAll(fittedTypes);
+            } else {
+                output.add(n + " can't be fitted anywhere.");
+            }
+
             argsIndex++;
         }
-        return queries;
+        return output.toArray(new String[0]);
     }
 
     // HackerRank web portal solution
@@ -36,8 +57,9 @@ public class JavaLoopsII {
         Scanner scanner = new Scanner(System.in);
         int q = scanner.nextInt();
 
+        int argsIndex = 1;
         for (int i = 0; i < q; i++) {
-            String n = scanner.next();
+            String n = args[argsIndex];
 
             List<String> fittedTypes = new ArrayList<String>();
 
@@ -73,6 +95,8 @@ public class JavaLoopsII {
             } else {
                 System.out.println(n + " can't be fitted anywhere.");
             }
+
+            argsIndex++;
         }
 
         scanner.close();
