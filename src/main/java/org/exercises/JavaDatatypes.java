@@ -5,8 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class JavaDatatypes {
-
-    public String[] main(String[] args) {
+    public static String[] main(String[] args) {
         int q = Integer.parseInt(args[0]);
 
         List<String> output = new ArrayList<String>();
@@ -53,7 +52,7 @@ public class JavaDatatypes {
     }
 
     // HackerRank web portal solution
-    public void main2(String[] args) {
+    public static void main2(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int q = scanner.nextInt();
 

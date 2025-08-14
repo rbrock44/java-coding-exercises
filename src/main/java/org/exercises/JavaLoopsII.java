@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 public class JavaLoopsII {
-    public String[] main(String[] args) {
+    public static String[] main(String[] args) {
         int q = Integer.parseInt(args[0]);
 
         String[] queries = new String[q];
@@ -31,7 +31,7 @@ public class JavaLoopsII {
     }
 
     // HackerRank web portal solution
-    public void main2(String[] args) {
+    public static void main2(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int q = scanner.nextInt();
 

@@ -14,7 +14,7 @@ public class JavaIntToString {
     }
 
     // HackerRank web portal solution
-    public void main2(String[] args) {
+    public static void main2(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         String wrong = "Wrong answer";

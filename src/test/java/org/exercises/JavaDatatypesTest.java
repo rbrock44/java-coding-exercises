@@ -9,8 +9,6 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.*;
 
 class JavaDatatypesTest {
-    JavaDatatypes obj = new JavaDatatypes();
-
     @ParameterizedTest
     @CsvSource({
         "5,-150:150000:1500000000:213333333333333333333333333333333333:-100000000000000,-150 can be fitted in:/* short/* int/* long/150000 can be fitted in:/* int/* long/1500000000 can be fitted in:/* int/* long/213333333333333333333333333333333333 can't be fitted anywhere./-100000000000000 can be fitted in:/* long"
@@ -23,6 +21,6 @@ class JavaDatatypesTest {
         ).toArray(String[]::new);
 
         String[] expectedQueries = expected.split("/");
-        assertArrayEquals(expectedQueries, obj.main(args));
+        assertArrayEquals(expectedQueries, JavaDatatypes.main(args));
     }
 }

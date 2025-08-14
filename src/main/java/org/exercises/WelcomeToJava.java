@@ -2,7 +2,6 @@ package org.exercises;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class WelcomeToJava {
     public static String[] main(String[] args) {
@@ -15,7 +14,7 @@ public class WelcomeToJava {
     }
 
     // HackerRank web portal solution
-    public void main2(String[] args) {
+    public static void main2(String[] args) {
         System.out.println("Hello, World.");
         System.out.println("Hello, Java.");
     }

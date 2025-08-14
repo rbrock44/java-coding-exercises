@@ -6,7 +6,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class JavaIntToStringTest {
-
     @ParameterizedTest
     @CsvSource(value = {
         "100, Good job",

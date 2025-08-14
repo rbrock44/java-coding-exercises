@@ -5,8 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class JavaIfElse {
-    static String banner = "================================";
-
     public static String main(String[] args) {
         int n = Integer.parseInt(args[0]);
 
@@ -14,7 +12,7 @@ public class JavaIfElse {
     }
 
     // HackerRank web portal solution
-    public void main2(String[] args) throws IOException {
+    public static void main2(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
         int N = Integer.parseInt(bufferedReader.readLine().trim());

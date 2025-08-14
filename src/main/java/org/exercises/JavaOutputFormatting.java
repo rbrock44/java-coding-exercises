@@ -25,7 +25,7 @@ public class JavaOutputFormatting {
     }
 
     // HackerRank web portal solution
-    public void main2(String[] args) {
+    public static void main2(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println(banner);
