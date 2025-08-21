@@ -16,7 +16,7 @@ public class JavaAnagrams {
 
         boolean areEqualOtherWay = mapB.entrySet().stream().allMatch(entry -> entry.getValue().equals(mapA.get(entry.getKey())));
 
-       return areEqual && areEqualOtherWay ? "Anagrams" : "Not Anagrams";
+        return areEqual && areEqualOtherWay ? "Anagrams" : "Not Anagrams";
     }
 
     // HackerRank web portal solution
@@ -47,6 +47,6 @@ public class JavaAnagrams {
             }
         }
 
-       return charCounts;
+        return charCounts;
     }
 }
