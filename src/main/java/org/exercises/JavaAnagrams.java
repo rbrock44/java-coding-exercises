@@ -24,6 +24,7 @@ public class JavaAnagrams {
         Scanner in = new Scanner(System.in);
         String a = in.next().toUpperCase();
         String b = in.next().toUpperCase();
+        in.close();
 
         Map<Character, Integer> mapA = countCharacterOccurrences(a);
         Map<Character, Integer> mapB = countCharacterOccurrences(b);
