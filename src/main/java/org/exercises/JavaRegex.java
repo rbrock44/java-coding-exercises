@@ -21,8 +21,8 @@ public class JavaRegex {
         Scanner in = new Scanner(System.in);
         String ip = in.next().toUpperCase();
 
+        in.close();
+
         System.out.println(ip.matches(new MyRegex().pattern));
     }
-
-
 }
